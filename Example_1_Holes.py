@@ -91,7 +91,7 @@ f = lambda x, y, t, v, a, b: (1/(4*t+1))*np.exp(-(x-a*t-0.5)**2/(v*(4*t+1)) - (y
 L = np.vstack([[-a], [-b], [2*v], [0], [2*v], [0]])                                         # Operator coefficients for Au_{xx} + Bu_{xy} + Cu_{yy} + Du_{x} + Eu_{y} + Fu
 
 # Explicit or Implicit?
-Implicit = False                                                                            # Choose the explicit scheme or the implicit one.
+Implicit = True                                                                            # Choose the explicit scheme or the implicit one.
 
 # Should I save the results?
 Save = True                                                                                 # Choose wether the results must be saved.
