@@ -112,7 +112,7 @@ regions_c = group_files_by_region(clouds)                                       
 
 # Solve the problem using a meshless Generalized Finite Difference approach.
 # Solve in clouds.
-triangulation = True
+triangulation = False                                                                       # Neighbors like in a triangulation?
 print('Processing Clouds of points.')
 for region, files in regions_c.items():                                                     # For each of the regions.
     process_region(region, files, data_clouds, results_clouds, Save)                        # Process the region.
