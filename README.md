@@ -1,4 +1,4 @@
-# mGFD
+# mGFD-Advection-Diffusion
 Data and methods for numerically solve Advection-Diffusion Equation using a meshless Generalized Finite Differences Scheme.
 
 All the codes are distributed under MIT License on [GitHub](https://github.com/gstinoco/mGFD) and are free to use, modify, and distribute giving the proper copyright notice.
