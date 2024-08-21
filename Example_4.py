@@ -18,17 +18,17 @@ Last Modification:
 
 # Library importation
 import numpy as np
-from run import run_simulation
+from Scripts.run import run_simulation
 
 # State the conditions for the problem.
 ## Problem Parameters
-v = 0.1                                                                                     # Diffusion coefficient.
-a = 0.3                                                                                     # Transport velocity on the x direction.
+v = 0.01                                                                                    # Diffusion coefficient.
+a = 0.2                                                                                     # Transport velocity on the x direction.
 b = 0.2                                                                                     # Transport velocity on the y direction.
 t = 2000                                                                                    # Number of time-steps.
 
 ## Function for the problem.
-f = lambda x, y, t, v, a, b:  np.exp(-((x - a*t)**2 + (y - b*t)**2) / (4*v*t + 1)) * (x**2 + y**2 <= 0.25)
+f = lambda x, y, t, v, a, b:  np.where((x - a*t > 0.2) & (x - a*t < 0.8) & (y - b*t > 0.2) & (y - b*t < 0.8), 1, 0)
 
 # Should I save the results?
 save = True

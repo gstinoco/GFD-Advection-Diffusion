@@ -149,6 +149,111 @@ def Cloud_Transient_Steps(p, tt, u_ap, u_ex, nom):
         plt.savefig(nok + 's.svg', format = 'svg')
         plt.close()
 
+def Cloud_Transient_1(p, tt, u_ap, save = False, nom = ''):
+    """
+    Cloud_Transient_1
+
+    This function graphs and saves the approximated and theoretical solutions of the problem being solved at several time levels.
+    Both solutions are presented side by side to help perform graphical comparisons between both solutions.
+
+    Input:
+        p               ndarray         Array with the coordinates of the nodes.
+        tt              ndarray         Array with the correspondence of the n triangles.
+        u_ap            ndarray         Array with the computed solution.
+        save            bool            Save the graphic.
+                                        True: Save the created graphs.
+                                        False: Don't save the created graphs (Default).
+        nom             string          Name of the files to be saved to drive.
+        
+    Output:
+        None
+    """
+
+    ## Variable initialization.
+    t       = u_ap.shape[1]
+    step    = max(1, t // 50)
+    T       = np.linspace(0, 1, t)
+    min_val = u_ap.min()
+    max_val = u_ap.max()
+
+    fig = plt.figure(figsize=(5, 5))
+    ax1 = fig.add_subplot(111, projection='3d')
+    
+    if save:
+        def update_plot(k):
+            k = min(k, t - 1)
+            ax1.clear()
+            tin = float(T[k])
+            fig.suptitle('Approximation at t = %1.3f s.' % tin)
+            
+            ax1.plot_trisurf(p[:, 0], p[:, 1], u_ap[:, k], triangles = tt, cmap = cm.coolwarm, linewidth = 0, antialiased = False)
+            ax1.set_zlim([min_val, max_val])
+
+            return fig, 
+    
+        ani = FuncAnimation(fig, update_plot, frames = np.arange(0, t+1, step), blit = True)
+        ani.save(nom, writer = 'ffmpeg', fps = 10)
+        plt.close()
+
+    else:
+        for k in np.arange(0, t, step):
+            tin = float(T[k])
+            fig.suptitle('Approximation at t = %1.3f s.' %tin)
+
+            ax1.plot_trisurf(p[:, 0], p[:, 1], u_ap[:, k], triangles = tt, cmap = cm.coolwarm, linewidth = 0, antialiased = False)
+            ax1.set_zlim([min_val, max_val])
+            
+            plt.pause(0.01)
+            ax1.clear()
+            
+        tin = float(T[-1])
+        fig.suptitle('Approximation at t = %1.3f s.' %tin)
+
+        ax1.plot_trisurf(p[:, 0], p[:, 1], u_ap[:, -1], triangles = tt, cmap = cm.coolwarm, linewidth = 0, antialiased = False)
+        ax1.set_zlim([min_val, max_val])
+        
+        plt.pause(0.1)
+        plt.close()
+
+
+def Cloud_Transient_Steps_1(p, tt, u_ap, nom):
+    """
+    Cloud_Transient_Steps_1
+
+    This function graphs and saves the approximated solution of the problem being solved at three different time levels.
+
+    Input:
+        p               ndarray         Array with the coordinates of the nodes.
+        tt              ndarray         Array with the correspondence of the n triangles.
+        u_ap            ndarray         Array with the computed solution.
+        nom             string          Name of the files to be saved to drive.
+    
+    Output:
+        None
+    """
+
+    ## Variable initialization.
+    t       = u_ap.shape[1]
+    step    = max(1, t // 3)
+    min_val = u_ap.min()
+    max_val = u_ap.max()
+    T       = np.linspace(0, 1, t)
+
+    ## Create the graphs.
+    for k in np.arange(0, t+1, step):
+        if k >= t:
+            k = t - 1
+        fig = plt.figure(figsize=(5, 5))
+        ax1 = fig.add_subplot(111, projection='3d')
+        tin = float(T[k])
+        plt.suptitle('Approximation at t = %1.3f s.' %tin)
+        ax1.plot_trisurf(p[:, 0], p[:, 1], u_ap[:, k], triangles = tt, cmap = cm.coolwarm, linewidth = 0, antialiased = False)
+        ax1.set_zlim([min_val, max_val])
+        nok = nom + '_' + str(format(T[k], '.2f'))
+        plt.savefig(nok + 's.png')
+        plt.savefig(nok + 's.svg', format = 'svg')
+        plt.close()
+
 
 def Error(er):
     """

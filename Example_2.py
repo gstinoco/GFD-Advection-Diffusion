@@ -18,14 +18,13 @@ Last Modification:
 
 # Library importation
 import numpy as np
-from run import run_simulation
-
+from Scripts.run import run_simulation
 
 # State the conditions for the problem.
 ## Problem Parameters
-v = 0.1                                                                                     # Diffusion coefficient.
-a = 0.3                                                                                     # Transport velocity on the x direction.
-b = 0.2                                                                                     # Transport velocity on the y direction.
+v = 0.01                                                                                    # Diffusion coefficient.
+a = 0.1                                                                                     # Transport velocity on the x direction.
+b = 0.1                                                                                     # Transport velocity on the y direction.
 t = 2000                                                                                    # Number of time-steps.
 
 ## Function for the problem.

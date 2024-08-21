@@ -18,8 +18,7 @@ Last Modification:
 
 # Library importation
 import numpy as np
-from run import run_simulation
-
+from Scripts.run import run_simulation
 
 # State the conditions for the problem.
 ## Problem Parameters
@@ -29,7 +28,7 @@ b = 0.2                                                                         
 t = 2000                                                                                    # Number of time-steps.
 
 ## Function for the problem.
-f = lambda x, y, t, v, a, b: (1/(4*t+1))*np.exp(-(x-a*t-0.5)**2/(v*(4*t+1)) - (y-b*t-0.5)**2/(v*(4*t+1)))
+f = lambda x, y, t, v, a, b: (1/(4*t + 1))*np.exp(-(x - a*t - 0.5)**2/(v*(4*t + 1)) - (y - b*t-0.5)**2/(v*(4*t + 1)))
 
 # Should I save the results?
 save = True
