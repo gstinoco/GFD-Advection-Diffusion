@@ -41,31 +41,39 @@ The following regions were considered for this repository:
 ## How to :microscope:
 The codes are self explained and completely documented. Examples on how to perform approximations can be found on the files that approximate the following conditions:
 - **Example_1.py**:
-$$f(x, y, v, a, b, t) = \left(\frac{1}{4t + 1}\right)\exp\left(-\frac{(x - at - 0.5)^2}{v(4t + 1)} - \frac{(y - bt - 0.5)^2}{v(4t + 1)}\right)$$
+    $$
+      f(x, y, v, a, b, t) = \left(\frac{1}{4t + 1}\right)\exp\left(-\frac{(x - at - 0.5)^2}{v(4t + 1)} - \frac{(y - bt - 0.5)^2}{v(4t + 1)}\right)
+    $$
 
 - **Example_2.py**:
-$$f(x, y, v, a, b, t) = \frac{1}{4\pi v t + 1} \exp\left(-\frac{(x - a t)^2 + (y - b t)^2}{4v t + 1}\right)$$
+    $$
+      f(x, y, v, a, b, t) = \frac{1}{4\pi v t + 1} \exp\left(-\frac{(x - a t)^2 + (y - b t)^2}{4v t + 1}\right)
+    $$
 
 - **Example_3.py**:
-$$f(x, y, v, a, b, t) = \sin(\pi (x - a t)) \cdot \sin(\pi (y - b t)) \cdot \exp(-v t)$$
+    $$
+      f(x, y, v, a, b, t) = \sin(\pi (x - a t)) \cdot \sin(\pi (y - b t)) \cdot \exp(-v t)
+    $$
 
 - **Example_4.py**:
-$$
-f(x, y, v, a, b, t) = \left\{
-  \begin{array}{ll}
-    1 & \text{if } 0.2 < x - a t < 0.8 \text{ y } 0.2 < y - b t < 0.8 \\
-    0 & \text{otherwise.}
-  \end{array}\right.
-$$
+    $$
+      f(x, y, v, a, b, t) =  \text{ for } 0.2 < x - a t < 0.8 \text{ and } 0.2 < y - b 
+    $$
 
 - **Example_5.py**:
-$$f(x, y, v, a, b, t) = \exp\left(-\frac{(x - a t)^2 + (y - b t)^2}{4v t + 1}\right) \cdot \mathbf{1}(x^2 + y^2 \leq 0.25)$$
+    $$
+      f(x, y, v, a, b, t) = \exp\left(-\frac{(x - a t)^2 + (y - b t)^2}{4v t + 1}\right) \cdot \mathbf{1}(x^2 + y^2 \leq 0.25)
+    $$
 
 - **Example_6.py**:
-$$f(x, y, v, a, b, t) = \exp\left(-100 \cdot ((x - 0.5 - a t)^2 + (y - 0.5 - b t)^2)\right) \cdot \exp(-v t)$$
+    $$
+      f(x, y, v, a, b, t) = \exp\left(-100 \cdot ((x - 0.5 - a t)^2 + (y - 0.5 - b t)^2)\right) \cdot \exp(-v t)
+    $$
 
 - **Example_7.py**:
-$$f(x, y, v, a, b, t) = \mathbf{H}(0.5 - (x - a t)) \cdot \mathbf{H}(0.5 - (y - b t))$$
+    $$
+      f(x, y, v, a, b, t) = \mathbf{H}(0.5 - (x - a t)) \cdot \mathbf{H}(0.5 - (y - b t))
+    $$
 
 These examples can be easily modified to perform approximations with different conditions and coefficients.
 
