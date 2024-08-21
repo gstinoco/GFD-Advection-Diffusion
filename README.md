@@ -10,13 +10,37 @@ For this, the proposed method uses a Generalized Finite Differences Method for t
 
 Examples of solving various problems in an irregular region can be found below.
 
-| Titicaca Lake Cloud of Points                                                                        | Titicaca Lake Cloud of Points with Holes      |                                                      
-| :--------------------------------------------------------------------------------------------------: | :-------------------------------------------:                                                        |
+| Titicaca Lake Cloud of Points                                                                        | Titicaca Lake Cloud of Points with Holes                                                             |
+| :--------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------:|
 | <img src="Data/Clouds/TIT.png">                                                                      | <img src="Data/Holes/TIT.png">                                                                       |
 |                                                                                                      |                                                                                                      |
-| Unstructured Clouds of points                                                                        | Unstructured Clouds of points with holes                                                             |
-| <video src="https://github.com/gstinoco/mGFD/assets/111999346/f3ace4e7-de20-4420-a492-8bea4be77d9d"> | <video src="https://github.com/gstinoco/mGFD/assets/111999346/8226f148-2086-4dbe-85e5-597ba4ed8498"> |
-| $\mid\mid e\mid\mid = 8.682520100538671e-07$                                                         | $\mid\mid e\mid\mid = 5.293394861064519e-07$                                                         |
+| Example 1                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/bd93859d-eeac-4c9e-b36e-d68aa0b9c413">        | <video src="https://github.com/user-attachments/assets/e2d2f527-ac39-44ac-9faf-6975c28c8fb6">        |
+| $\mid\mid e\mid\mid = 5.2118943754735635e-08$                                                        | $\mid\mid e\mid\mid = 4.863648258963009e-08$                                                         |
+|                                                                                                      |                                                                                                      |
+| Example 2                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/3a296664-5b6b-4f91-99d3-dae1359fd80c">        | <video src="https://github.com/user-attachments/assets/897b22b5-78af-41e0-9bbd-ebe9e4af7892">        |
+| $\mid\mid e\mid\mid = 1.0322904171601065e-04$                                                        | $\mid\mid e\mid\mid = 1.0828264528519587e-04$                                                        |
+|                                                                                                      |                                                                                                      |
+| Example 3                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/13e992d8-6884-4428-95f2-83f6639c1555">        | <video src="https://github.com/user-attachments/assets/94d2a0cc-3d48-4c50-9494-568be0b2faf5">        |
+| $\mid\mid e\mid\mid = 1.0731208462156676e-04$                                                        | $\mid\mid e\mid\mid = 1.1097288200407238e-04$                                                        |
+|                                                                                                      |                                                                                                      |
+| Example 4                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/6e1bc418-d28a-497f-a391-b8a5efd77cd6">        | <video src="https://github.com/user-attachments/assets/bb4dfc77-afb8-48d8-9da9-acf5bacc38a6">        |
+| $\mid\mid e\mid\mid = 1.9083623596292698e-03$                                                        | $\mid\mid e\mid\mid = 2.229806198931734e-03$                                                         |
+|                                                                                                      |                                                                                                      |
+| Example 5                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/bd434f9d-3bb0-4372-b1e2-e4a5acfc4c6c">        | <video src="https://github.com/user-attachments/assets/7a59a4c3-5916-49a6-951d-74fc8106512c">        |
+| $\mid\mid e\mid\mid = 9.589504723286449e-04$                                                         | $\mid\mid e\mid\mid = 1.485761180356545e-03$                                                         |
+|                                                                                                      |                                                                                                      |
+| Example 6                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/548b4b31-f1aa-480b-b755-5ca5d59da859">        | <video src="https://github.com/user-attachments/assets/019796dd-53c3-47f5-a21f-76a29d5630ec">        |
+| $\mid\mid e\mid\mid = 4.155055732537449e-05$                                                         | $\mid\mid e\mid\mid = 4.649037082216217e-05$                                                         |
+|                                                                                                      |                                                                                                      |
+| Example 7                                                                                                                                                                                                  ||
+| <video src="https://github.com/user-attachments/assets/e3be65a4-1f34-43d3-9365-e84367119a9c">        | <video src="https://github.com/user-attachments/assets/e9e03cb6-1944-4fd4-a5c5-c88a4a8a0b00">        |
+| $\mid\mid e\mid\mid = 1.0882583340529215e-03$                                                        | $\mid\mid e\mid\mid = 1.1889349763568261e-03$                                                        |
 
 
 ## Data :open_file_folder:
