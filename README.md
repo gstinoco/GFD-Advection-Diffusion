@@ -50,10 +50,12 @@ $$f(x, y, v, a, b, t) = \frac{1}{4\pi v t + 1} \exp\left(-\frac{(x - a t)^2 + (y
 $$f(x, y, v, a, b, t) = \sin(\pi (x - a t)) \cdot \sin(\pi (y - b t)) \cdot \exp(-v t)$$
 
 - **Example_4.py**:
-$$f(x, y, v, a, b, t) = \begin{cases} 
+\begin{equation}
+f(x, y, v, a, b, t) = \begin{cases} 
 1 & \text{if } 0.2 < x - a t < 0.8 \text{ y } 0.2 < y - b t < 0.8 \\
 0 & \text{otherwise.}
-\end{cases}$$
+\end{cases}
+\end{equation}
 
 - **Example_5.py**:
 $$f(x, y, v, a, b, t) = \exp\left(-\frac{(x - a t)^2 + (y - b t)^2}{4v t + 1}\right) \cdot \mathbf{1}(x^2 + y^2 \leq 0.25)$$
