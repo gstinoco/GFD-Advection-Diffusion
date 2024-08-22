@@ -17,8 +17,6 @@ Last Modification:
 """
 
 import numpy as np
-
-import numpy as np
 from joblib import Parallel, delayed
 
 def compute_gamma_for_node(i, p, vec, L):

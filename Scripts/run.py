@@ -81,7 +81,7 @@ def run_simulation(f, v, a, b, t, implicit, data, exam = 'test', holes = False, 
     global Implicit, triangulation, Save
     Implicit      = implicit
     Save          = save                                                                    # Choose wether the results must be saved.
-    triangulation = True                                                                   # Neighbors like in a triangulation?
+    triangulation = False                                                                   # Neighbors like in a triangulation?
 
     if holes:
         results_clouds = 'Results/'+ exam + '/Holes/'                                       # Folder to save the results (explicit).
